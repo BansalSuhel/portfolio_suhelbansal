@@ -1,0 +1,147 @@
+/* #010615 */
+
+.project-screen {
+  background-color: #010615;
+  background-color: #000;
+  min-height: 100vh;
+  color: #fff;
+}
+
+.project-screen h1 {
+  text-align: center;
+  padding-top: 6rem;
+  padding-bottom: 4rem;
+  font-size: 5rem;
+  color: #fff;
+
+  animation: leftToRightAnimation 2s ease-in-out;
+}
+
+.project-screen__card-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+
+  max-width: 40rem;
+  margin: 0 auto;
+}
+
+.project-screen__card-wrapper a {
+  text-decoration: none;
+
+  flex: 0 0 100%;
+}
+
+.card {
+  width: 100%;
+  height: 60rem;
+  background-color: #060c21;
+  position: relative;
+  z-index: 0;
+
+  margin-bottom: 5rem;
+}
+
+.card:before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  bottom: -2px;
+  right: -2px;
+  background-color: #fff;
+  z-index: -1;
+}
+
+.card:after {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  bottom: -2px;
+  right: -2px;
+  background-color: #fff;
+  filter: blur(40px);
+  z-index: -2;
+}
+
+.card-one:before,
+.card-one:after {
+  background: linear-gradient(235deg, #89ff00, #010615, #00bcd4);
+}
+
+.card-two:before,
+.card-two:after {
+  background: linear-gradient(235deg, #ffee00fb, #010615, #f32121);
+}
+
+.card-three:before,
+.card-three:after {
+  background: linear-gradient(235deg, #2aff5f, #010615, #f39821);
+}
+
+.card-four:before,
+.card-four:after {
+  background: linear-gradient(235deg, #ff00fe, #010615, #fbff00);
+}
+
+.card__upper {
+  width: 100%;
+  height: 30rem;
+  background-color: #060c21;
+}
+
+.card__upper img {
+  width: 100%;
+  height: 100%;
+}
+
+.card__lower {
+  height: 30rem;
+  background-color: #060c21;
+}
+
+.card__lower h2 {
+  font-size: 1.8rem;
+  text-align: center;
+  padding: 1.5rem;
+  color: #bbb;
+  letter-spacing: 1px;
+}
+
+.card__lower-list ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-left: 1rem;
+}
+
+.card__lower-list ul li {
+  list-style: none;
+  flex: 0 0 30%;
+  font-size: 1.4rem;
+  padding: 1rem 2rem;
+  text-align: center;
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 10px;
+  background-color: #903749;
+  color: #fff;
+}
+
+@media only screen and (max-width: 500px) {
+  .project-screen {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+  .project-screen__card-wrapper {
+    margin: 0;
+    max-width: 100%;
+    width: 100%;
+  }
+  .project-screen__card-wrapper a {
+    width: 100%;
+  }
+  .card {
+    width: 100%;
+  }
+}
